@@ -18,8 +18,8 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/ecommerce')
+let MONGODB_URL = 'mongodb+srv://Sandeep:rIze5iyZxBNi6Ni0@cluster0.ldmo1yk.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URL)
 .then(() => {
   console.log("DB is connected");    
 }).catch(err => {
